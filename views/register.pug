@@ -1,0 +1,31 @@
+
+extends layout
+
+block content
+  
+  h1 Register
+  form(method='POST', action='/users/register')
+
+    #form-group
+      label Name:
+      input.input.mini(name='name',type='text')
+    #form-group
+      label Email:
+      input.input.mini(name='email',type='text')
+    #form-group
+      label Username:
+      input.input.mini(name='username',type='text')
+    #form-group
+      label Password:
+      input.input.mini(name='password',type='password')
+    #form-group
+      label Location:
+      br
+      select(name='location')
+        option(value='kblock') kblock
+        option(value='mblock') mblock
+        option(value='jblock') jblock
+        option(value='fblock') fblock
+      br
+    input.btn.btn-primary(type='submit',value='Submit')
+    

@@ -1,0 +1,13 @@
+extends layout
+
+block content 
+  
+    h1 #{title} 
+    form(method='POST', action='/additems/order/'+additem._id)
+      h5  name #{additem.item}
+      h5  price #{additem.price}
+      h5  Quanity #{additem.totalQuanity}
+      h5 totalprice #{additem.totalQuanity*additem.price}
+ 
+    
+

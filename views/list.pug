@@ -1,0 +1,24 @@
+extends layout
+
+block content 
+    h1 #{title} 
+    form(method='POST',action='/additems/add')
+      #form-group
+        label Category:
+        input.form-control(name='title',type='text')
+      #form-group
+        label foodnamme:
+        input.form-control(name='item',type='text')
+      #form-group
+        label Price:
+        input.form-control(name='price',type='Number')
+      #form-group
+        label Quanity:
+        input.form-control(name='Quanity',type='Number')  
+      input.btn.btn-primary(type='submit',value='orderconform')
+      input.btn.btn-primary(type='submit',value='Submit')
+     
+
+ 
+    
+

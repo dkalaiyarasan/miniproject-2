@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  
+  h5  name #{additem.item}
+  h5  price #{additem.price}
+  h5  cartQuanity #{additem.Quanity}
+  h5 Quanity
+  form(method='POST', action='/additem/order/'+additem._id)
+  input.form-control(name='totalQuanity',type='Number',value='totalQuanity')
+ 
+  
+  hr
+  a.btn.btn-default(href='/additem/edit/'+additem._id) Edit
+  a.btn.btn-danger.delete-additem(href='#',data-id=additem._id) Delete
+  a.btn.btn-default(href='/additem/order/'+additem._id) orderconform
+  a.btn.btn-danger(href='/additem/order/'+additem._id) cancelOrder

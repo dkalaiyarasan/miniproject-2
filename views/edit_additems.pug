@@ -1,0 +1,24 @@
+extends layout
+
+block content 
+    h1 #{title} 
+    form(method='POST', action='/additems/edit/'+additem._id)
+      #form-group
+        label category:
+        input.input.mini(name='title',type='text', value=additem.title)
+      #form-group
+        label foodname:
+        input.input.mini(name='item',type='text',value=additem.item)
+      #form-group
+        label Price:
+        input.input.mini(name='price',type='Number',value=additem.price)
+      #form-group
+        label Quanity:
+        input.input.mini(name='Quanity',type='Number',value=additem.Quanity)
+     
+      br
+      input.btn.btn-primary(type='submit',value='Submit')
+
+ 
+    
+
